@@ -1,0 +1,17 @@
+
+:root {
+    --clr-bg: ghostwhite;
+
+}
+
+body{
+    background-color: var(--clr-bg);
+}
+
+p{
+    margin: 0!important;
+}
+
+.container{
+    max-width: 1000px;
+}

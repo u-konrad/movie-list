@@ -1,0 +1,377 @@
+{
+    "id": "tt6710474",
+    "title": "Everything Everywhere All at Once",
+    "originalTitle": "",
+    "fullTitle": "Everything Everywhere All at Once (2022)",
+    "type": "Movie",
+    "year": "2022",
+    "image": "https://imdb-api.com/images/original/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_Ratio0.6904_AL_.jpg",
+    "releaseDate": "2022-03-25",
+    "runtimeMins": "140",
+    "runtimeStr": "2h 20min",
+    "plot": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save the world by exploring other universes connecting with the lives she could have led.",
+    "plotLocal": "",
+    "plotLocalIsRtl": false,
+    "awards": "",
+    "directors": "Dan Kwan, Daniel Scheinert",
+    "directorList": [
+        {
+            "id": "nm3453283",
+            "name": "Dan Kwan"
+        },
+        {
+            "id": "nm3215397",
+            "name": "Daniel Scheinert"
+        }
+    ],
+    "writers": "Dan Kwan, Daniel Scheinert",
+    "writerList": [
+        {
+            "id": "nm3453283",
+            "name": "Dan Kwan"
+        },
+        {
+            "id": "nm3215397",
+            "name": "Daniel Scheinert"
+        }
+    ],
+    "stars": "Jenny Slate, James Hong, Michelle Yeoh",
+    "starList": [
+        {
+            "id": "nm2809577",
+            "name": "Jenny Slate"
+        },
+        {
+            "id": "nm0393222",
+            "name": "James Hong"
+        },
+        {
+            "id": "nm0000706",
+            "name": "Michelle Yeoh"
+        }
+    ],
+    "actorList": [
+        {
+            "id": "nm2809577",
+            "image": "https://imdb-api.com/images/original/MV5BMjM0YjI1MzMtNTliMy00YTMwLTllOTUtOWVhMjY1ZmQxOThkXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_Ratio1.0429_AL_.jpg",
+            "name": "Jenny Slate",
+            "asCharacter": ""
+        },
+        {
+            "id": "nm0393222",
+            "image": "https://imdb-api.com/images/original/MV5BMjM0MTQxOTA4MF5BMl5BanBnXkFtZTgwODE1OTcyMjE@._V1_Ratio1.5000_AL_.jpg",
+            "name": "James Hong",
+            "asCharacter": ""
+        },
+        {
+            "id": "nm0000706",
+            "image": "https://imdb-api.com/images/original/MV5BMTg0NTI0NDkzOF5BMl5BanBnXkFtZTcwMjYwMTIwNw@@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Michelle Yeoh",
+            "asCharacter": "Evelyn Wangas Evelyn Wang"
+        },
+        {
+            "id": "nm3513533",
+            "image": "https://imdb-api.com/images/original/MV5BNTBjZjQwYzctY2RkNi00ODI0LWI3N2UtYmMwMDk2M2FkOTI0XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Stephanie Hsu",
+            "asCharacter": "Eleanoras Eleanor"
+        },
+        {
+            "id": "nm0000130",
+            "image": "https://imdb-api.com/images/original/MV5BMjI0MTI0MDk2OV5BMl5BanBnXkFtZTgwODQ4MTE0NDE@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Jamie Lee Curtis",
+            "asCharacter": ""
+        },
+        {
+            "id": "nm0702841",
+            "image": "https://imdb-api.com/images/original/MV5BMDYyYmYwNzctZTA5OS00ZjdhLWJmZmItMTg0Y2M5MGZlZjFjXkEyXkFqcGdeQXVyMTM5NDUxMTA@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Ke Huy Quan",
+            "asCharacter": ""
+        },
+        {
+            "id": "nm1484270",
+            "image": "https://imdb-api.com/images/original/MV5BODlkZWJkZDAtOGI0NC00ODQ1LTg2OTAtOWFhNWUzYmQ3NDVlXkEyXkFqcGdeQXVyMTI0MTczNDk@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Harry Shum Jr.",
+            "asCharacter": ""
+        },
+        {
+            "id": "nm0913585",
+            "image": "https://imdb-api.com/images/original/MV5BODBhNDE2YzQtOTNiMi00ZTMxLTg3ODUtMjYzYzYwZTNiZTM1XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Audrey Wasilewski",
+            "asCharacter": "Alpha RV Officer #2as Alpha RV Officer #2"
+        },
+        {
+            "id": "nm5869658",
+            "image": "https://imdb-api.com/images/original/MV5BNTQyM2JmNDYtMDI3Zi00NTlkLWEyNTUtNjI5NjI2NmIyZWI0XkEyXkFqcGdeQXVyMjM0Njg4ODc@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Andy Le",
+            "asCharacter": ""
+        },
+        {
+            "id": "nm1190376",
+            "image": "https://imdb-api.com/images/original/MV5BYTdiZjY2ZjUtNzc5MC00OWVjLWFlYWQtZjgyMWExZjc5MGY4XkEyXkFqcGdeQXVyMjAyNzc5MQ@@._V1_Ratio1.2571_AL_.jpg",
+            "name": "Anthony Molinari",
+            "asCharacter": "Officieras Officier"
+        },
+        {
+            "id": "nm8083553",
+            "image": "https://imdb-api.com/images/original/MV5BYzVlYjZiZWMtNmIxNy00MTIxLTgzN2ItZTJmOTM3NWFhY2Q2XkEyXkFqcGdeQXVyOTkxMzA1OTg@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Amanda",
+            "asCharacter": "Dominatrixas Dominatrix"
+        },
+        {
+            "id": "nm2467531",
+            "image": "https://imdb-api.com/images/original/MV5BOGRlYWZlODMtNmI5NC00M2FlLTk3M2UtMWYyYmE0MDg0Njk0XkEyXkFqcGdeQXVyMTk1NDczOTc@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Peter Banifaz",
+            "asCharacter": "Alpha RV Officeras Alpha RV Officer"
+        },
+        {
+            "id": "nm5911757",
+            "image": "https://imdb-api.com/images/original/MV5BMzU5NDE1NTItZjhjNi00YzFjLThmNzEtZmYwMGQxMWM1NTcxXkEyXkFqcGdeQXVyMjMzOTQwMzc@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Brian Le",
+            "asCharacter": "Brian Leas Brian Le"
+        },
+        {
+            "id": "nm4379401",
+            "image": "https://imdb-api.com/images/original/MV5BNmUyMWY1MDUtMDJkZS00MmJlLTg3ZTEtNGU4YWMwMWMyZmFjXkEyXkFqcGdeQXVyMzU3NTE0NA@@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Pablo Ramos",
+            "asCharacter": "Pedestrianas Pedestrian"
+        },
+        {
+            "id": "nm2832782",
+            "image": "https://imdb-api.com/images/original/MV5BMzA0MjczNjAyMV5BMl5BanBnXkFtZTgwMTU0NzkwNDE@._V1_Ratio1.0000_AL_.jpg",
+            "name": "D.Y. Sao",
+            "asCharacter": "Chinese Choiras Chinese Choir"
+        },
+        {
+            "id": "nm8554359",
+            "image": "https://imdb-api.com/images/original/MV5BOWY0MzgwMTMtYWU1NS00NjdkLTgwZjMtZWFjOTc1NzEwN2E2XkEyXkFqcGdeQXVyNjk1NDUwMDY@._V1_Ratio1.0000_AL_.jpg",
+            "name": "Emmett Ferguson",
+            "asCharacter": "Movie Theater Goeras Movie Theater Goer"
+        }
+    ],
+    "fullCast": null,
+    "genres": "Action, Adventure, Comedy",
+    "genreList": [
+        {
+            "key": "Action",
+            "value": "Action"
+        },
+        {
+            "key": "Adventure",
+            "value": "Adventure"
+        },
+        {
+            "key": "Comedy",
+            "value": "Comedy"
+        }
+    ],
+    "companies": "AGBO, Hotdog Hands, Ley Line Entertainment",
+    "companyList": [
+        {
+            "id": "co0295628",
+            "name": "AGBO"
+        },
+        {
+            "id": "co0773586",
+            "name": "Hotdog Hands"
+        },
+        {
+            "id": "co0705617",
+            "name": "Ley Line Entertainment"
+        }
+    ],
+    "countries": "USA",
+    "countryList": [
+        {
+            "key": "USA",
+            "value": "USA"
+        }
+    ],
+    "languages": "English, Mandarin, Cantonese",
+    "languageList": [
+        {
+            "key": "English",
+            "value": "English"
+        },
+        {
+            "key": "Mandarin",
+            "value": "Mandarin"
+        },
+        {
+            "key": "Cantonese",
+            "value": "Cantonese"
+        }
+    ],
+    "contentRating": "R",
+    "imDbRating": null,
+    "imDbRatingVotes": null,
+    "metacriticRating": null,
+    "ratings": null,
+    "wikipedia": null,
+    "posters": null,
+    "images": null,
+    "trailer": null,
+    "boxOffice": {
+        "budget": "",
+        "openingWeekendUSA": "",
+        "grossUSA": "",
+        "cumulativeWorldwideGross": ""
+    },
+    "tagline": null,
+    "keywords": "chinese,immigrant,multiverse,a24,saving the world",
+    "keywordList": [
+        "chinese",
+        "immigrant",
+        "multiverse",
+        "a24",
+        "saving the world"
+    ],
+    "similars": [
+        {
+            "id": "tt9356952",
+            "title": "The Death of Dick Long",
+            "fullTitle": "The Death of Dick Long",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BOTQ3ZjZhZjAtNWRkNy00NWQ3LWJlMDgtMTExYmY5NTc0MWY2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6763_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": "6.3"
+        },
+        {
+            "id": "tt5181260",
+            "title": "The Unbreakable Boy",
+            "fullTitle": "The Unbreakable Boy",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BMjFkMGNkMDEtNDdjYy00YjYwLTk3MjMtNGI2NTAyM2ZmMWY3XkEyXkFqcGdeQXVyMTMwMDA5ODU3._V1_Ratio0.8019_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": ""
+        },
+        {
+            "id": "tt8296030",
+            "title": "You Won't Be Alone",
+            "fullTitle": "You Won't Be Alone",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BMmU2MDkyZWMtYjJmNi00YjE1LWIzODctZjNjZmY0OGMzNzQzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6763_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": "6.8"
+        },
+        {
+            "id": "tt13320622",
+            "title": "The Lost City",
+            "fullTitle": "The Lost City",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BMmIwYzFhODAtY2I1YS00ZDdmLTkyYWQtZjI5NDIwMDc2MjEyXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6763_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": ""
+        },
+        {
+            "id": "tt14114802",
+            "title": "The Outfit",
+            "fullTitle": "The Outfit",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BYWQ0NWUyMjktYjg4Yy00NmY3LTg2YzEtNWY5OTY5YTc2MjhjXkEyXkFqcGdeQXVyMTA2MDU0NjM5._V1_Ratio0.6763_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": "7.6"
+        },
+        {
+            "id": "tt6060964",
+            "title": "Man of God",
+            "fullTitle": "Man of God",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BNDllNmVmYTMtNTBkNS00Mzg3LThiNjktMzQ2MjA2Y2RhMjc1XkEyXkFqcGdeQXVyMjQyNDY5MzE@._V1_Ratio0.7053_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": "7.4"
+        },
+        {
+            "id": "tt11291274",
+            "title": "The Unbearable Weight of Massive Talent",
+            "fullTitle": "The Unbearable Weight of Massive Talent",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BN2UxMzI1N2EtNmZkYi00M2RmLTliMDctZTlmN2ZlMGVmMjNmXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_Ratio0.6763_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": ""
+        },
+        {
+            "id": "tt11040762",
+            "title": "Alice",
+            "fullTitle": "Alice",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BZmI2ZjUxYTAtOTIwNS00OTdiLTg2N2ItMjU0YzY3NmRhYjIxXkEyXkFqcGdeQXVyMTAyMjQ3NzQ1._V1_Ratio0.6763_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": "5.3"
+        },
+        {
+            "id": "tt11204094",
+            "title": "The Duke",
+            "fullTitle": "The Duke",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BYmQwYTIzNTgtNDNjNS00MTM2LWJkZmQtNDEwMjJkYWJlOTBmXkEyXkFqcGdeQXVyOTgxNDIzMTY@._V1_Ratio0.6763_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": "6.8"
+        },
+        {
+            "id": "tt11548822",
+            "title": "Cow",
+            "fullTitle": "Cow",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BZDlhOWE5ODktNmVmZi00MzUyLTgzZDctMjVhNDhhYzk4NDE2XkEyXkFqcGdeQXVyNjU0NTI0Nw@@._V1_Ratio0.6763_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": "7.2"
+        },
+        {
+            "id": "tt4034354",
+            "title": "Swiss Army Man",
+            "fullTitle": "Swiss Army Man",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BMTk0OTEyMjM1OF5BMl5BanBnXkFtZTgwMzMzODM4ODE@._V1_Ratio0.6763_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": "6.9"
+        },
+        {
+            "id": "tt13560574",
+            "title": "X",
+            "fullTitle": "X",
+            "year": "",
+            "image": "https://imdb-api.com/images/original/MV5BMTJiMmE5YWItOWZjYS00YTg0LWE0MTYtMzg2ZTY4YjNkNDEzXkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_Ratio0.8019_AL_.jpg",
+            "plot": "",
+            "directors": "",
+            "stars": "",
+            "genres": "",
+            "imDbRating": ""
+        }
+    ],
+    "tvSeriesInfo": null,
+    "tvEpisodeInfo": null,
+    "errorMessage": null
+}
