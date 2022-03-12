@@ -50,5 +50,11 @@ p {
 }
 
 .padding-top-page {
-  padding-top: 50px;
+  padding-top: 3rem;
+}
+
+@media screen and (max-width:768px) {
+  .padding-top-page {
+    padding-top: 1rem;
+  }
 }

@@ -5,11 +5,12 @@ import {
   GiMagnifyingGlass,
   GiFountainPen,
   GiBroadsword,
-  GiCannon
+  GiCannon,
+  GiRobberMask
 } from "react-icons/gi";
-import { MdOutlineSportsVolleyball, MdTheaterComedy,MdFamilyRestroom } from "react-icons/md";
+import { MdOutlineSportsVolleyball, MdTheaterComedy,MdFamilyRestroom,MdToys } from "react-icons/md";
 import { RiKnifeBloodFill, RiGhostFill } from "react-icons/ri";
-import { FaHatCowboySide } from "react-icons/fa";
+import { FaHatCowboySide,FaSpaceShuttle } from "react-icons/fa";
 
 const genres = {
   Drama: <GiDramaMasks />,
@@ -22,10 +23,12 @@ const genres = {
   Adventure: <FaHatCowboySide />,
   Mystery: <GiMagnifyingGlass />,
   Biography:<GiFountainPen/>,
-  Crime:<GiPistolGun />,
+  Crime:<GiRobberMask/>,
   Fantasy:<GiBroadsword/>,
   War:<GiCannon/>,
-  Family:<MdFamilyRestroom/>
+  Family:<MdFamilyRestroom/>,
+  Animation:<MdToys/>,
+  "Sci-Fi":<FaSpaceShuttle/>
 };
 
 export default genres;

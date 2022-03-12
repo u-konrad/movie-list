@@ -9,12 +9,14 @@ import { MdOutlineArrowBack } from "react-icons/md";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { lastRatedActions } from "../../store/store";
+import genres from "../../shared/constants/genres";
+import { AiFillStar } from "react-icons/ai";
 
 const url = "https://imdb-api.com/en/API/Title/k_x62pdsfe/";
 
 const MoviePage = () => {
   const [movie, setMovie] = useState(null);
-  // const { fetchData, isLoading } = useHttp();
+  const { fetchData, isLoading } = useHttp();
   const [isError, setError] = useState(false);
   const [rating, setRating] = useState(0);
   const history = useHistory();
@@ -22,26 +24,24 @@ const MoviePage = () => {
 
   const { movieId } = useParams();
 
-  const isLoading = false;
-
   useEffect(() => {
-    // const fetchMovie = async () => {
-    //   try {
-    //     const response = await fetchData(url + movieId);
-    //     setMovie(response);
-    //   } catch (err) {
-    //     setError(true);
-    //   }
-    // };
+    const fetchMovie = async () => {
+      try {
+        const response = await fetchData(url + movieId);
+        setMovie(response);
+      } catch (err) {
+        setError(true);
+      }
+    };
     setMovie(testMovie);
-    // fetchMovie();
+    fetchMovie();
   }, []);
 
   return (
     <Wrapper>
       {isLoading ? (
         <LoadingSpinner />
-      ) : isError ? (
+      ) : isError || !movie.title ? (
         "Nie udało się załadować filmu."
       ) : (
         !!movie && (
@@ -51,20 +51,40 @@ const MoviePage = () => {
               <div>
                 <h2>{movie.title}</h2>
                 <p>
-                  <strong>ImdbRating:</strong> {movie.imDbRating ?? "Brak ocen"}
+                  <strong>IMDbRating:</strong>{" "}
+                  {movie.imDbRating ? (
+                    <span>
+                      <AiFillStar style={{ color: "goldenrod" }} />{" "}
+                      {movie.imDbRating}
+                    </span>
+                  ) : (
+                    "Brak ocen"
+                  )}
                 </p>
-                <p>{movie.genres}</p>
+                <p>
+                  {" "}
+                  <strong>Premiera:</strong> {movie.releaseDate}
+                </p>
+                <p>
+                  {" "}
+                  {movie.genreList?.map((genre) => (
+                    <span className="me-1">
+                      {genres[genre.key]} {genre.key}{" "}
+                    </span>
+                  ))}
+                </p>
                 <p>{movie.plot}</p>
                 <p>
-                  <strong>Obsada</strong>
+                  <strong>Obsada:</strong>
                 </p>
                 <div className="actor-container">
-                  {movie.actorList.slice(0, 12).map((actor) => (
-                    <div>
-                      <img src={actor.image} alt="" />
-                      <p>{actor.name}</p>
-                    </div>
-                  ))}
+                  {!!movie.actorList &&
+                    movie.actorList.slice(0, 12).map((actor) => (
+                      <div>
+                        <img src={actor.image} alt="" />
+                        <p>{actor.name}</p>
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>
@@ -76,22 +96,25 @@ const MoviePage = () => {
                 onChange={(event, newValue) => {
                   setRating(newValue);
                   dispatch(
-                    lastRatedActions.setLastRated({ title: movie.title, value: newValue })
+                    lastRatedActions.setLastRated({
+                      title: movie.title,
+                      value: newValue,
+                    })
                   );
                 }}
                 max={10}
                 size="large"
               />{" "}
             </div>
-            <button
-              className="btn btn-outline-dark mt-4"
-              onClick={() => history.push("/")}
-            >
-              <MdOutlineArrowBack /> Powrót
-            </button>
           </>
         )
       )}
+      <button
+        className="d-block btn btn-outline-dark mt-4"
+        onClick={() => history.push("/")}
+      >
+        <MdOutlineArrowBack /> Powrót
+      </button>
     </Wrapper>
   );
 };

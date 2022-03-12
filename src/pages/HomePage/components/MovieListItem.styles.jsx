@@ -8,13 +8,20 @@ const Wrapper = styled.div`
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   &:hover{
     transform: scale(1.03);
   }
 
-
  img {
    width: 200px;
+  }
+
+  .genre-container span:not(:last-of-type){
+    margin-right: 0.5rem;
   }
 `;
 

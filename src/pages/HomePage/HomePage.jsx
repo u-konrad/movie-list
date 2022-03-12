@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import LoadingSpinner from "../../shared/components/LoadingSpinner";
 import MovieListItem from "./components/MovieListItem";
 import useHttp from "../../shared/hooks/use-http";
@@ -8,7 +8,7 @@ import cinemaImg from "../../assets/images/cinema.jpg";
 import Wrapper from "./HomePage.styles";
 
 const url =
-  "https://imdb-api.com/API/AdvancedSearch/k_x62pdsfe?title_type=feature,tv_movie&release_date=2020-03-11,2022-03-11&sort=release_date,desc";
+  "https://imdb-api.com/API/AdvancedSearch/k_x62pdsfe?title_type=feature,tv_movie&title=";
 const oldkey = "k_z7fjidj6";
 const newkey = "k_x62pdsfe";
 
@@ -18,22 +18,28 @@ const HomePage = () => {
   const [isError, setError] = useState(false);
   const [query, setQuery] = useState("");
 
-  useEffect(() => {
-    const fetchLatestMovies = async () => {
+  const fetchMoviesByTitle = useCallback(
+    async (title = "") => {
       try {
-        const response = await fetchData(url);
+        const response = await fetchData(url + title);
         setMovieList(response.results);
       } catch (err) {
         console.log(err);
         setError(true);
       }
-    };
+    },
+    [fetchData, setMovieList, setError]
+  );
 
-    fetchLatestMovies();
-  }, [fetchData, setMovieList, setError]);
+  useEffect(() => {
+    fetchMoviesByTitle();
+  }, [fetchMoviesByTitle]);
 
-  const querySubmitHandler = (e) => {
+  const querySubmitHandler = async (e) => {
     e.preventDefault();
+    if (query.length > 3) {
+      fetchMoviesByTitle(query);
+    }
   };
 
   return (
@@ -52,18 +58,23 @@ const HomePage = () => {
             query={query}
             onQueryChange={(e) => setQuery(e.target.value)}
             onQuerySubmit={querySubmitHandler}
+            submitDisabled={() => query.length < 3}
           />
         </div>
       </div>
       <div style={{ position: "relative" }}>
         {isLoading ? (
           <LoadingSpinner />
+        ) : !isError ? (
+          !!movieList && (
+            <div>
+              {movieList.map((movie) => (
+                <MovieListItem movie={movie} />
+              ))}
+            </div>
+          )
         ) : (
-          <div>
-            {movieList.map((movie) => (
-              <MovieListItem movie={movie} />
-            ))}
-          </div>
+          <p className="display text-muted">Nie udało się pobrać filmów.</p>
         )}
       </div>
       <Notification />
