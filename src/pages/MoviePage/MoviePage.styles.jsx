@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+    padding-bottom: 20px;
 
   .movie-container {
     display: flex;
     flex-direction: row;
-    padding-top: 50px;
   }
 
   .movie-container  > div {
@@ -32,6 +32,7 @@ const Wrapper = styled.div`
       aspect-ratio: 1.5/2;
       object-fit: cover;
     }
+
     .actor-container p {
       font-size: 14px;
     }

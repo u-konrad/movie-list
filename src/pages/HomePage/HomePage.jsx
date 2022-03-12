@@ -1,8 +1,11 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import LoadingSpinner from "../../shared/components/LoadingSpinner";
 import MovieListItem from "./components/MovieListItem";
 import useHttp from "../../shared/hooks/use-http";
 import Notification from "../../shared/components/Notification";
+import SearchInput from "./components/SearchInput";
+import cinemaImg from "../../assets/images/cinema.jpg";
+import Wrapper from "./HomePage.styles";
 
 const url =
   "https://imdb-api.com/API/AdvancedSearch/k_x62pdsfe?title_type=feature,tv_movie&release_date=2020-03-11,2022-03-11&sort=release_date,desc";
@@ -13,6 +16,7 @@ const HomePage = () => {
   const [movieList, setMovieList] = useState([]);
   const { fetchData, isLoading } = useHttp();
   const [isError, setError] = useState(false);
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const fetchLatestMovies = async () => {
@@ -28,9 +32,29 @@ const HomePage = () => {
     fetchLatestMovies();
   }, [fetchData, setMovieList, setError]);
 
+  const querySubmitHandler = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <Fragment>
-      <h1>MovieFinder</h1>
+    <Wrapper>
+      <div className="position-relative  mb-3">
+        <div className="img-container">
+          <img className="hero-img shadow rounded" src={cinemaImg} alt="" />
+        </div>
+        <div className="position-absolute search-input">
+          <h1>
+            <span style={{ fontWeight: 300 }}>Movie</span>Finder
+          </h1>
+          <SearchInput
+            className="my-4"
+            placeholder="Szukaj filmów..."
+            query={query}
+            onQueryChange={(e) => setQuery(e.target.value)}
+            onQuerySubmit={querySubmitHandler}
+          />
+        </div>
+      </div>
       <div style={{ position: "relative" }}>
         {isLoading ? (
           <LoadingSpinner />
@@ -43,7 +67,7 @@ const HomePage = () => {
         )}
       </div>
       <Notification />
-    </Fragment>
+    </Wrapper>
   );
 };
 
