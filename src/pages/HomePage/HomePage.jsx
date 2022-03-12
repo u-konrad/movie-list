@@ -6,15 +6,18 @@ import Notification from "../../shared/components/Notification";
 import SearchInput from "./components/SearchInput";
 import cinemaImg from "../../assets/images/cinema.jpg";
 import Wrapper from "./HomePage.styles";
+import { useSelector } from "react-redux";
 
-const url =
-  `https://imdb-api.com/API/AdvancedSearch/${process.env.REACT_APP_API_KEY}?title_type=feature,tv_movie&title=`;
+const url = `https://imdb-api.com/API/AdvancedSearch/${process.env.REACT_APP_API_KEY}?title_type=feature,tv_movie&title=`;
 
 const HomePage = () => {
   const [movieList, setMovieList] = useState([]);
   const { fetchData, isLoading } = useHttp();
   const [isError, setError] = useState(false);
   const [query, setQuery] = useState("");
+
+ 
+
 
   const fetchMoviesByTitle = useCallback(
     async (title = "") => {
@@ -35,6 +38,8 @@ const HomePage = () => {
   useEffect(() => {
     fetchMoviesByTitle();
   }, [fetchMoviesByTitle]);
+
+
 
   const querySubmitHandler = async (e) => {
     e.preventDefault();
@@ -59,7 +64,7 @@ const HomePage = () => {
             query={query}
             onQueryChange={(e) => setQuery(e.target.value)}
             onQuerySubmit={querySubmitHandler}
-            submitDisabled={ query.length < 3}
+            submitDisabled={query.length < 3}
           />
         </div>
       </div>
@@ -70,7 +75,7 @@ const HomePage = () => {
           !!movieList && (
             <ul>
               {movieList.map((movie, index) => (
-                <MovieListItem  key={index} movie={movie} />
+                <MovieListItem key={index} movie={movie} />
               ))}
             </ul>
           )

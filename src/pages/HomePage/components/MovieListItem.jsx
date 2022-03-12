@@ -9,9 +9,15 @@ const MovieListItem = ({ movie }) => {
 
   const releaseYear = (desc) => desc.match(/\d{4}/);
 
+  const convertRating = (rating) => {
+    return parseFloat(rating).toFixed(3);
+  };
+
+
+
   return (
     <Wrapper
-    data-testid="item"
+      data-testid="item"
       className="card rounded shadow p-3 mb-3"
       onClick={() => history.push(`/movies/${movie.id}`)}
     >
@@ -28,7 +34,7 @@ const MovieListItem = ({ movie }) => {
           <strong>
             {movie.imDbRating ? (
               <span>
-                <AiFillStar style={{ color: "goldenrod" }} /> {movie.imDbRating}
+                <AiFillStar style={{ color: "goldenrod" }} /> {convertRating(movie.imDbRating)}
               </span>
             ) : (
               "Brak ocen"
@@ -36,7 +42,7 @@ const MovieListItem = ({ movie }) => {
           </strong>
         </p>
         <p className="text-end genre-container">
-          {movie.genreList?.map((genre,index) => (
+          {movie.genreList?.map((genre, index) => (
             <span key={index}>
               {genres[genre.key]}&nbsp;{genre.key}
             </span>
