@@ -22,6 +22,8 @@ const store = configureStore({
   },
 });
 
+export const lastRatedReducer =lastRatedSlice.reducer
+
 export const lastRatedActions=lastRatedSlice.actions
 
 export default store;

@@ -68,11 +68,11 @@ const HomePage = () => {
           <LoadingSpinner />
         ) : !isError ? (
           !!movieList && (
-            <div>
+            <ul>
               {movieList.map((movie, index) => (
-                <MovieListItem key={index} movie={movie} />
+                <MovieListItem  key={index} movie={movie} />
               ))}
-            </div>
+            </ul>
           )
         ) : (
           <p className="display text-muted">Nie udało się pobrać filmów.</p>

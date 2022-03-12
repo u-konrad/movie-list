@@ -1,6 +1,6 @@
 # MovieFinder
 
-Simple movie finder app connected to [IMDb-API](https://imdb-api.com/)
+Simple movie finder app connected to [IMDb-API](https://imdb-api.com/).
 
 ## Setup
 

@@ -11,6 +11,7 @@ const MovieListItem = ({ movie }) => {
 
   return (
     <Wrapper
+    data-testid="item"
       className="card rounded shadow p-3 mb-3"
       onClick={() => history.push(`/movies/${movie.id}`)}
     >
