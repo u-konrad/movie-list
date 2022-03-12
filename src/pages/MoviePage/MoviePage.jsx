@@ -49,7 +49,7 @@ const MoviePage = () => {
             <img src={movie.image} alt="" />
             <div>
               <h2 data-testid="title">{movie.title}</h2>
-              <p>
+              <p className="mb-2">
                 <strong>IMDbRating:</strong>{" "}
                 {movie.imDbRating ? (
                   <span>
@@ -60,11 +60,11 @@ const MoviePage = () => {
                   "Brak ocen"
                 )}
               </p>
-              <p>
+              <p  className="mb-2">
                 {" "}
                 <strong>Premiera:</strong> {movie.releaseDate}
               </p>
-              <p>
+              <p  className="mb-2">
                 {" "}
                 {movie.genreList?.map((genre, index) => (
                   <span key={index} className="me-1">
@@ -72,8 +72,8 @@ const MoviePage = () => {
                   </span>
                 ))}
               </p>
-              <p>{truncateText(movie.plot, 300)}</p>
-              <p>
+              <p  className="mb-2">{truncateText(movie.plot, 300)}</p>
+              <p  className="mb-2">
                 <strong>Obsada:</strong>
               </p>
               <div className="actor-container">
