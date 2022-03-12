@@ -6,7 +6,6 @@ import Notification from "../../shared/components/Notification";
 import SearchInput from "./components/SearchInput";
 import cinemaImg from "../../assets/images/cinema.jpg";
 import Wrapper from "./HomePage.styles";
-import { useSelector } from "react-redux";
 
 const url = `https://imdb-api.com/API/AdvancedSearch/${process.env.REACT_APP_API_KEY}?title_type=feature,tv_movie&title=`;
 
