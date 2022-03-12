@@ -19,7 +19,7 @@ const SearchInput = ({
           value={query}
           onChange={onQueryChange}
         />
-        <button className="btn btn-success" type="submit" disabled ={submitDisabled()}>
+        <button className="btn btn-success" type="submit" disabled = {submitDisabled}>
           <BiSearch />{" "}
         </button>
       </div>

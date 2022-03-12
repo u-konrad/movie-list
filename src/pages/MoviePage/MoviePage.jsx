@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect, useState } from "react";
 import useHttp from "../../shared/hooks/use-http";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../../shared/components/LoadingSpinner";
@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { lastRatedActions } from "../../store/store";
 import genres from "../../shared/constants/genres";
 import { AiFillStar } from "react-icons/ai";
+import truncateText from "../../shared/utils/truncateText";
 
 const url = "https://imdb-api.com/en/API/Title/k_x62pdsfe/";
 
@@ -73,13 +74,13 @@ const MoviePage = () => {
                     </span>
                   ))}
                 </p>
-                <p>{movie.plot}</p>
+                <p>{truncateText(movie.plot,300)}</p>
                 <p>
                   <strong>Obsada:</strong>
                 </p>
                 <div className="actor-container">
                   {!!movie.actorList &&
-                    movie.actorList.slice(0, 12).map((actor) => (
+                    movie.actorList.slice(0, 10).map((actor) => (
                       <div>
                         <img src={actor.image} alt="" />
                         <p>{actor.name}</p>

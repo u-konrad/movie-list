@@ -8,9 +8,7 @@ import cinemaImg from "../../assets/images/cinema.jpg";
 import Wrapper from "./HomePage.styles";
 
 const url =
-  "https://imdb-api.com/API/AdvancedSearch/k_x62pdsfe?title_type=feature,tv_movie&title=";
-const oldkey = "k_z7fjidj6";
-const newkey = "k_x62pdsfe";
+  `https://imdb-api.com/API/AdvancedSearch/${process.env.REACT_APP_API_KEY}?title_type=feature,tv_movie&title=`;
 
 const HomePage = () => {
   const [movieList, setMovieList] = useState([]);
@@ -22,6 +20,9 @@ const HomePage = () => {
     async (title = "") => {
       try {
         const response = await fetchData(url + title);
+        if (!response.results) {
+          throw new Error("No movies");
+        }
         setMovieList(response.results);
       } catch (err) {
         console.log(err);
@@ -58,7 +59,7 @@ const HomePage = () => {
             query={query}
             onQueryChange={(e) => setQuery(e.target.value)}
             onQuerySubmit={querySubmitHandler}
-            submitDisabled={() => query.length < 3}
+            submitDisabled={ query.length < 3}
           />
         </div>
       </div>
@@ -68,8 +69,8 @@ const HomePage = () => {
         ) : !isError ? (
           !!movieList && (
             <div>
-              {movieList.map((movie) => (
-                <MovieListItem movie={movie} />
+              {movieList.map((movie, index) => (
+                <MovieListItem key={index} movie={movie} />
               ))}
             </div>
           )

@@ -23,8 +23,9 @@ const Wrapper = styled.div`
 
   .search-input {
     top: 50%;
-    transform: translateY(-50%);
-    left: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
     width: 75%;
     min-width: 250px;
   }

@@ -35,8 +35,8 @@ const MovieListItem = ({ movie }) => {
           </strong>
         </p>
         <p className="text-end genre-container">
-          {movie.genreList?.map((genre) => (
-            <span >
+          {movie.genreList?.map((genre,index) => (
+            <span key={index}>
               {genres[genre.key]}&nbsp;{genre.key}
             </span>
           ))}

@@ -18,12 +18,13 @@ const Wrapper = styled.div`
     .movie-container > img {
       max-width: 450px;
       width: 100%;
+
     }
 
     .actor-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-      gap: 0.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 1rem;
     }
 
     .actor-container img {
@@ -34,7 +35,7 @@ const Wrapper = styled.div`
     }
 
     .actor-container p {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     .rating-container{
