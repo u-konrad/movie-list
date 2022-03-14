@@ -23,7 +23,7 @@ const Notification = () => {
     } else {
       setShow(true);
     }
-  }, [ratedList]);
+  }, [listHasEntries]);
 
   return (
     <Fragment>
