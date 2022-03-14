@@ -6,16 +6,18 @@ import Notification from "../../shared/components/Notification";
 import SearchInput from "./components/SearchInput";
 import cinemaImg from "../../assets/images/cinema.jpg";
 import Wrapper from "./HomePage.styles";
+import { useDispatch, useSelector } from "react-redux";
+import { searchResultsActions } from "../../store/store";
 
 const url = `https://imdb-api.com/API/AdvancedSearch/${process.env.REACT_APP_API_KEY}?title_type=feature,tv_movie&title=`;
 
 const HomePage = () => {
-  const [movieList, setMovieList] = useState([]);
-  const { fetchData,isLoading } = useHttp();
+  const { fetchData, isLoading } = useHttp();
   const [isError, setError] = useState(false);
-  const [query, setQuery] = useState("");
+  const [enteredQuery, setEnteredQuery] = useState("");
+  const { query, movieList } = useSelector((state) => state.searchResults);
+  const dispatch = useDispatch();
 
- 
   const fetchMoviesByTitle = useCallback(
     async (title = "") => {
       try {
@@ -23,25 +25,34 @@ const HomePage = () => {
         if (!response.results) {
           throw new Error("No movies");
         }
-        setMovieList(response.results);
+        dispatch(
+          searchResultsActions.addNewList({
+            query:title,
+            movieList: response.results,
+          })
+        );
       } catch (err) {
         console.log(err);
         setError(true);
       }
     },
-    [fetchData, setMovieList, setError]
+    [fetchData, setError, dispatch]
   );
 
   useEffect(() => {
-    fetchMoviesByTitle();
-  }, [fetchMoviesByTitle]);
+    if (!movieList.length) {
+      fetchMoviesByTitle();
+    }
+  }, [fetchMoviesByTitle, movieList]);
 
-
+  useEffect(() => {
+    setEnteredQuery(query);
+  }, [query]);
 
   const querySubmitHandler = async (e) => {
     e.preventDefault();
-    if (query.length > 3) {
-      fetchMoviesByTitle(query);
+    if (enteredQuery.length > 3) {
+      fetchMoviesByTitle(enteredQuery);
     }
   };
 
@@ -58,16 +69,16 @@ const HomePage = () => {
           <SearchInput
             className="my-4"
             placeholder="Szukaj filmów..."
-            query={query}
-            onQueryChange={(e) => setQuery(e.target.value)}
+            query={enteredQuery}
+            onQueryChange={(e) => setEnteredQuery(e.target.value)}
             onQuerySubmit={querySubmitHandler}
-            submitDisabled={query.length < 3}
+            submitDisabled={enteredQuery.length < 3}
           />
         </div>
       </div>
       <div style={{ position: "relative" }}>
         {isLoading ? (
-          <LoadingSpinner/>
+          <LoadingSpinner />
         ) : !isError ? (
           !!movieList && (
             <ul>

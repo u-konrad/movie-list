@@ -13,11 +13,23 @@ const lastRatedSlice = createSlice({
       const existingMovieIndex = state.ratedList.findIndex(
         (movie) => movie.title === title
       );
-      if (existingMovieIndex===-1) {
+      if (existingMovieIndex === -1) {
         state.ratedList.push(action.payload);
       } else {
-        state.ratedList[existingMovieIndex].value=value
+        state.ratedList[existingMovieIndex].value = value;
       }
+    },
+  },
+});
+
+const searchResultsSlice = createSlice({
+  name: "searchResults",
+  initialState: { movieList: [], query: "" },
+  reducers: {
+    addNewList(state, action) {
+      const { movieList, query } = action.payload;
+      state.movieList = movieList;
+      state.query = query;
     },
   },
 });
@@ -25,11 +37,14 @@ const lastRatedSlice = createSlice({
 const store = configureStore({
   reducer: {
     lastRated: lastRatedSlice.reducer,
+    searchResults: searchResultsSlice.reducer,
   },
 });
 
 export const lastRatedReducer = lastRatedSlice.reducer;
+export const searchResultsReducer = searchResultsSlice.reducer;
 
 export const lastRatedActions = lastRatedSlice.actions;
+export const searchResultsActions = searchResultsSlice.actions;
 
 export default store;

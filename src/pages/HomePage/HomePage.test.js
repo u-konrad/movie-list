@@ -1,14 +1,26 @@
 import { render, screen } from "@testing-library/react";
 import { createMemoryHistory } from "history";
-import testMovie from "../../testData/testMovie.json";
 import HomePage from "./HomePage";
 import { Provider } from "react-redux";
-import store from "../../store/store";
+// import store from "../../store/store";
 import { Router } from "react-router-dom";
 import "@testing-library/jest-dom";
 import React from "react";
+import { configureStore } from "@reduxjs/toolkit";
+import { lastRatedReducer, searchResultsReducer } from "../../store/store";
 
 describe("Home Page component", () => {
+let store;
+  
+  beforeEach(() => {
+    store = configureStore({
+      reducer: {
+        lastRated: lastRatedReducer,
+        searchResults: searchResultsReducer,
+      },
+    });
+  });
+
   test("renders movie list if request succeeds", async () => {
     window.fetch = jest.fn();
     window.fetch.mockResolvedValue({
@@ -47,13 +59,17 @@ describe("Home Page component", () => {
 
     const items = await screen.findAllByTestId("item");
     expect(items).not.toHaveLength(0);
+
+    
+    const element = await screen.findByText(/Batman/);
+    expect(element).toBeInTheDocument();
   });
 
   test("renders error message if request fails", async () => {
     window.fetch = jest.fn();
     window.fetch.mockResolvedValue({
       ok: false,
-      json: async () => [testMovie],
+      json: async () => undefined,
     });
 
     const history = createMemoryHistory();

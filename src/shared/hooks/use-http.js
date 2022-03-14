@@ -4,7 +4,7 @@ import { useState, useCallback } from "react";
 const requestTimeoutMs = 8000;
 
 const useHttp = () => {
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
 
   const fetchData = useCallback(async (url) => {
     const requestController = new AbortController();
@@ -14,6 +14,7 @@ const useHttp = () => {
     );
 
     try {
+      setLoading(true)
       const response = await fetch(url, {
         signal: requestTimeoutId.signal,
       });
