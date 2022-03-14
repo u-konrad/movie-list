@@ -23,7 +23,8 @@ const Wrapper = styled.div`
   }
 
   p {
-    width: 250px;
+    max-width: 350px;
+    width:90vw;
   }
 
  
