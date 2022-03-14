@@ -57,6 +57,50 @@ ul{
   padding: 0;
 }
 
+
+.showing {
+  animation: showing 0.5s ease-in-out;
+}
+
+.hiding {
+  animation: hiding 0.5s ease-in-out;
+}
+
+.btn-open{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  right: 20px;
+  background-color: gainsboro;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: none;
+
+
+}
+
+@keyframes showing {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hiding {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
 @media screen and (max-width:768px) {
   .padding-top-page {
     padding-top: 1rem;

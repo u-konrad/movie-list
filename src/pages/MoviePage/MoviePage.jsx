@@ -95,7 +95,7 @@ const MoviePage = () => {
               onChange={(event, newValue) => {
                 setRating(newValue);
                 dispatch(
-                  lastRatedActions.setLastRated({
+                  lastRatedActions.addRatedMovie({
                     title: movie.title,
                     value: newValue,
                   })

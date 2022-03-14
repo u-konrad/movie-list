@@ -1,17 +1,23 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 
 const initialLastRated = {
-  title: "",
-  rating: 0,
+  ratedList: [],
 };
 
 const lastRatedSlice = createSlice({
   name: "lastRated",
   initialState: initialLastRated,
   reducers: {
-    setLastRated(state, action) {
-      state.title = action.payload.title;
-      state.rating =action.payload.value
+    addRatedMovie(state, action) {
+      const { title, value } = action.payload;
+      const existingMovieIndex = state.ratedList.findIndex(
+        (movie) => movie.title === title
+      );
+      if (existingMovieIndex===-1) {
+        state.ratedList.push(action.payload);
+      } else {
+        state.ratedList[existingMovieIndex].value=value
+      }
     },
   },
 });
@@ -22,8 +28,8 @@ const store = configureStore({
   },
 });
 
-export const lastRatedReducer =lastRatedSlice.reducer
+export const lastRatedReducer = lastRatedSlice.reducer;
 
-export const lastRatedActions=lastRatedSlice.actions
+export const lastRatedActions = lastRatedSlice.actions;
 
 export default store;

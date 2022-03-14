@@ -11,13 +11,11 @@ const url = `https://imdb-api.com/API/AdvancedSearch/${process.env.REACT_APP_API
 
 const HomePage = () => {
   const [movieList, setMovieList] = useState([]);
-  const { fetchData, isLoading } = useHttp();
+  const { fetchData,isLoading } = useHttp();
   const [isError, setError] = useState(false);
   const [query, setQuery] = useState("");
 
  
-
-
   const fetchMoviesByTitle = useCallback(
     async (title = "") => {
       try {
@@ -69,7 +67,7 @@ const HomePage = () => {
       </div>
       <div style={{ position: "relative" }}>
         {isLoading ? (
-          <LoadingSpinner />
+          <LoadingSpinner/>
         ) : !isError ? (
           !!movieList && (
             <ul>

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const Wrapper = styled.div`
   position: fixed;
   bottom: 0;
@@ -15,35 +14,19 @@ const Wrapper = styled.div`
   padding: 1rem;
   background-color: gainsboro;
 
-  .showing {
-    animation: showing 0.5s ease-in-out;
+  button {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    border: none;
+    font-size: 32px;
   }
 
-  .hiding {
-    animation: hiding 0.5s ease-in-out;
+  p {
+    width: 250px;
   }
 
-  @keyframes showing {
-    0% {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes hiding {
-    0% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(100%);
-    }
-  }
+ 
 `;
 
-export default Wrapper
+export default Wrapper;
